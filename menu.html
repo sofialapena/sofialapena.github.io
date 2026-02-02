@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú · Sofía Lapeña</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #000;
+      color: white;
+    }
+
+
+
+    #pantalla-inicial {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+    }
+
+    .imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .imagen img {
+      width: 100%;
+      height: auto;
+      max-height: 90vh;
+      border: 3px solid white;
+      object-fit: cover;
+    }
+
+   
+    .nombre {
+      font-size: 2.2rem;
+      font-weight: 300;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .nombre::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: white;
+      margin-top: 8px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      gap: 30px;
+      border-left: 2px solid white;
+    }
+
+    .menu a {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #bfe0f3;
+      padding-left: 10px;
+    }
+
+    @media (max-width: 800px) {
+      #pantalla-inicial {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+      }
+      .menu {
+        border-left: none;
+        border-top: 2px solid white;
+        align-items: center;
+        text-align: center;
+      }
+      .nombre::after {
+        margin-left: auto;
+        margin-right: auto;
+      }
+/* */
+ 
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <section id="pantalla-inicial">
+
+    <div class="imagen">
+      <img src="images/banner_5.webp" alt="Imagen de bienvenida">
+    </div>
+
+    
+
+    <div class="menu">
+      <div class="nombre">Sofía Lapeña</div>
+
+      <a href="portfolio.html#illustrations">Illustrations</a>
+      <a href="portfolio.html#characters">Characters</a>
+      <a href="portfolio.html#environments">Environments</a>
+      <a href="portfolio.html#about">About</a>
+      <a href="portfolio.html#contact">Contact</a>
+    </div>
+
+  </section>
+
+</body>
+</html>
